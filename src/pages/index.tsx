@@ -1,16 +1,17 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import styles from "@/styles/Home.module.css";
 
-const geistSans = Geist({
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  weight: "100 900",
 });
-
-const geistMono = Geist_Mono({
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: "100 900",
 });
 
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
         <main className={styles.main}>
           <Image
             className={styles.logo}
-            src="/next.svg"
+            src="https://nextjs.org/icons/next.svg"
             alt="Next.js logo"
             width={180}
             height={38}
@@ -50,7 +51,7 @@ export default function Home() {
             >
               <Image
                 className={styles.logo}
-                src="/vercel.svg"
+                src="https://nextjs.org/icons/vercel.svg"
                 alt="Vercel logomark"
                 width={20}
                 height={20}
@@ -75,7 +76,7 @@ export default function Home() {
           >
             <Image
               aria-hidden
-              src="/file.svg"
+              src="https://nextjs.org/icons/file.svg"
               alt="File icon"
               width={16}
               height={16}
@@ -89,7 +90,7 @@ export default function Home() {
           >
             <Image
               aria-hidden
-              src="/window.svg"
+              src="https://nextjs.org/icons/window.svg"
               alt="Window icon"
               width={16}
               height={16}
@@ -103,7 +104,7 @@ export default function Home() {
           >
             <Image
               aria-hidden
-              src="/globe.svg"
+              src="https://nextjs.org/icons/globe.svg"
               alt="Globe icon"
               width={16}
               height={16}
